@@ -14,7 +14,8 @@ The version scheme for this gem reflects the date of the embedded MaxMind databa
 We recommend using it with the [MaxMindDB](https://github.com/yhirose/maxminddb) gem, e.g.
 
 ``` ruby
-db = MaxMindDB.new(Geolite2City::DB_PATH)
+db = MaxMindDB.new(GeoLite2City::DB_PATH)
+db.lookup("74.125.225.224")
 ```
 
 See its documentation for more.
