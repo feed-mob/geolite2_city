@@ -6,6 +6,8 @@ MaxMind updates the database monthly on their site. We make no guarantees about 
 
 The version scheme for this gem reflects the date of the embedded MaxMind database, e.g. version `2018.08.07`. We may add another position for any maintenance releases, e.g. `2018.08.07.1`.
 
+Please be aware that this is a relatively large gem due to the embedded database. At the time of writing, it's about 65 MB.
+
 
 ## Usage
 
