@@ -11,9 +11,7 @@ The version scheme for this gem reflects the date of the embedded MaxMind databa
 
 `Geolite2City::DB_PATH` will be the path to the `.mmdb` database.
 
-We recommend using it with the [MaxMindDB](https://github.com/yhirose/maxminddb) gem. The database can be a bit slow to load (hundreds of ms), so we suggest doing it only once, e.g.
-
-In `config/initializers/maxmind_db.rb` in a Rails project:
+We recommend using it with the [MaxMindDB](https://github.com/yhirose/maxminddb) gem. The database can be a bit slow to load (hundreds of ms), so we suggest doing it only once, e.g. in `config/initializers/maxmind_db.rb` in a Rails project:
 
 ``` ruby
 MAXMIND_DB = MaxMindDB.new(GeoLite2City::DB_PATH)
