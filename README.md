@@ -19,7 +19,7 @@ We've used it with the [MaxMindDB](https://github.com/yhirose/maxminddb) gem. Th
 MAXMIND_DB = MaxMindDB.new(GeoLite2City::DB_PATH)
 ```
 
-(By putting it in an initializer, it will be present before web servers such as Unicorn fork worker processes, meaning it will use as little memory as possible.)
+(By putting it in an initializer, it will be present before the app server (such as Unicorn) forks worker processes, meaning it will use as little memory as possible.)
 
 To look up an IP:
 
