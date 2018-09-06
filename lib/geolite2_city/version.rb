@@ -1,3 +1,3 @@
 module Geolite2City
-  VERSION = "2018.08.07"
+  VERSION = "2018.09.05"
 end
