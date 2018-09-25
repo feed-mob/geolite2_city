@@ -56,9 +56,8 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ### Updating the DB
 
-* Download the latest from <http://geolite.maxmind.com/download/geoip/database/GeoLite2-City.tar.gz> (linked from <https://dev.maxmind.com/geoip/geoip2/geolite2/>), unpack it and stick its contents in the `db` dir of the gem.
-* Update the version of the gem to match the date in the unpacked folder name.
-* Release the gem.
+* Run `rake db:update` and make a pull request with the result
+* Release the gem
 * Prosper‽
 
 
