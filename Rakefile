@@ -26,7 +26,7 @@ namespace :db do
       tar.each do |tarfile|
         if tarfile.directory?
           _prefix, file_version = tarfile.full_name.split("_", 2)
-          gem_version = [file_version[0,4], file_version[4,2], file_version[6,2]].join(".")
+          gem_version = [ file_version[0,4], file_version[4,2], file_version[6,2] ].join(".")
 
           File.open(File.join(__dir__, "db", "VERSION"), "w+") do |f|
             f.write gem_version
