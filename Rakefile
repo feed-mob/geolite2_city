@@ -28,17 +28,13 @@ namespace :db do
           _prefix, file_version = tarfile.full_name.split("_", 2)
           gem_version = [ file_version[0,4], file_version[4,2], file_version[6,2] ].join(".")
 
-          File.open(File.join(__dir__, "db", "VERSION"), "w+") do |f|
-            f.write gem_version
-          end
+          File.write(File.join(__dir__, "db", "VERSION"), gem_version)
 
           next
         end
 
         filename = File.basename(tarfile.full_name)
-        File.open(File.join(__dir__, "db", filename), "wb+") do |f|
-          f.write(tarfile.read)
-        end
+        File.binwrite(File.join(__dir__, "db", filename), tarfile.read)
       end
     end
 
