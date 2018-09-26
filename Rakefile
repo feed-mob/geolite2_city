@@ -22,13 +22,16 @@ namespace :db do
 
     FileUtils.mkdir_p(File.join(__dir__, "db"))
 
+    gem_version = nil
+
     Gem::Package::TarReader.new(unzipped) do |tar|
       tar.each do |tarfile|
         if tarfile.directory?
-          version = tarfile.full_name.split("_", 2)[1]
+          file_version = tarfile.full_name.split("_", 2)[1]
+          gem_version = [file_version[0,4], file_version[4,2], file_version[6,2]].join(".")
 
           File.open(File.join(__dir__, "db", "VERSION"), "w+") do |f|
-            f.write [version[0,4], version[4,2], version[6,2]].join(".")
+            f.write gem_version
           end
 
           next
@@ -40,6 +43,8 @@ namespace :db do
         end
       end
     end
+
+    puts "Done! Version: #{gem_version}"
   end
 end
 
