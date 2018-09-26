@@ -15,7 +15,7 @@ end
 desc "Update the DB and the Gem version"
 namespace :db do
   task :update do
-    uri = URI("http://geolite.maxmind.com/download/geoip/database/GeoLite2-City.tar.gz")
+    uri = URI("https://geolite.maxmind.com/download/geoip/database/GeoLite2-City.tar.gz")
     tarball = Net::HTTP.get(uri)
     z = Zlib::GzipReader.new(StringIO.new(tarball))
     unzipped = StringIO.new(z.read)
