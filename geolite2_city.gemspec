@@ -5,7 +5,7 @@ require "geolite2_city/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "geolite2_city"
-  spec.version       = Geolite2City::VERSION
+  spec.version       = GeoLite2City::VERSION
   spec.authors       = ["Henrik Nyh"]
   spec.email         = ["henrik@nyh.se"]
 

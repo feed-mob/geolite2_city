@@ -1,9 +1,9 @@
 require "test_helper"
 require "maxminddb"
 
-class Geolite2CityTest < Minitest::Test
+class GeoLite2CityTest < Minitest::Test
   def test_that_it_has_a_version_number
-    refute_nil ::Geolite2City::VERSION
+    refute_nil ::GeoLite2City::VERSION
   end
 
   def test_that_the_file_is_parsable
