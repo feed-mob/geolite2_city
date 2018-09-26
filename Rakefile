@@ -12,6 +12,7 @@ Rake::TestTask.new(:test) do |t|
   t.test_files = FileList["test/**/*_test.rb"]
 end
 
+desc "Update the DB and the Gem version"
 namespace :db do
   task :update do
     uri = URI("http://geolite.maxmind.com/download/geoip/database/GeoLite2-City.tar.gz")
