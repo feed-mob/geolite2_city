@@ -20,8 +20,6 @@ namespace :db do
     z = Zlib::GzipReader.new(StringIO.new(tarball))
     unzipped = StringIO.new(z.read)
 
-    FileUtils.mkdir_p(File.join(__dir__, "db"))
-
     gem_version = nil
 
     Gem::Package::TarReader.new(unzipped) do |tar|
