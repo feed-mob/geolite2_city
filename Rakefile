@@ -27,7 +27,7 @@ namespace :db do
     Gem::Package::TarReader.new(unzipped) do |tar|
       tar.each do |tarfile|
         if tarfile.directory?
-          file_version = tarfile.full_name.split("_", 2)[1]
+          _prefix, file_version = tarfile.full_name.split("_", 2)
           gem_version = [file_version[0,4], file_version[4,2], file_version[6,2]].join(".")
 
           File.open(File.join(__dir__, "db", "VERSION"), "w+") do |f|
