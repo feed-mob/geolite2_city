@@ -56,6 +56,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ### Updating the DB
 
+* Run `bundle`
 * Run `rake db:update` and make a pull request with the result
 * Release the gem
 * Prosper‽
